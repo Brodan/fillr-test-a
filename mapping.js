@@ -5,13 +5,31 @@
 */
 var request = require('request')
 var cheerio = require('cheerio');
+var fs = require('fs');
 
 var url = 'http://autofill.mozdev.org/autofilltest.html';
+var output = {
+  table: []
+};
 
+//the key of each element in the hash will be the ‘name’ attribute of the control. 
 request(url, function(err, resp, body){
-  $ = cheerio.load(body);
-  inputs = $('input, select');
-  $(inputs).each(function(i, input){
-    console.log($(input).attr('name'));
-  });
+  if (!err && resp.statusCode == 200) {
+      $ = cheerio.load(body);
+      inputs = $('input, select');
+      $(inputs).each(function(i, input){
+        console.log($(input).attr('name'));
+      });
+    }
+  else {
+    console.log('error retrieving mozdev page')
+  }
 });
+
+// the corresponding value for each control name key will be an ‘autofill detail token’ 
+// describing your best guess at the most suitable section (optional), 
+// address type (optional) and autofill field name for the control as per the WHATWG autofill spec.
+
+output.table.push({'test': 'test'});
+
+fs.writeFileSync('myjsonfile.json', JSON.stringify(output), 'utf8'); //change to mapping.json at end
