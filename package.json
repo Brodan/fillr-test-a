@@ -1,12 +1,16 @@
 {
   "name": "fillr-test-a",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Coding test to work through creating field mappings, javascript and regular expressions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository" : {
+    "type" : "git", 
+    "url" : "https://github.com/Brodan/fillr-test-a"
+  },
+  "author": "Chris Hranj <christopher.hranj@gmail.com> (https://brodan.biz)",
   "license": "ISC",
   "dependencies": {
     "chai": "*",
