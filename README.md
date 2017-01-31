@@ -1,5 +1,13 @@
 # Fillr Test - A
 
+# Notes
+- Completion of Task 1 can be found in `mapping.json`. Note: A number of keys (`Ecom_WalletID`, `Ecom_ConsumerOrderID`, `Ecom_Payment_Card_Protocol`, `Ecom_SchemaVersion`) are not mapped to a value because there is not an appropriate autofill detail token to map it to.
+- To show completion of Task 2, run the following:
+```
+$ npm install
+$ ./run/tests
+```
+
 _These two tasks are separate, they do not depend on each other in any way other than referencing the same web forms. I.e. Task #2 does not depend on completing Task #1 at all and vice versa._
 
 Prerequisites 
