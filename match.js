@@ -4,7 +4,7 @@
  * and returns a list of keys pertaining to credit card information.
  * Filtering is done using regular expressions.
  *
- * @summary   Extract credit card date from metadata hash.
+ * @summary   Filter credit card data from metadata hash.
  *
  * @author    Christopher Hranj
  */

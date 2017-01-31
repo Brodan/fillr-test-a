@@ -1,5 +1,6 @@
 /**
- * This file parses through the Mozilla autofill test page
+ * This file exports the extract function used in /test/test.js.
+ * extract parses through the Mozilla autofill test page
  * and extracts control_labls and attribute names and returns
  * a hash object in the required format. 
  * cheerio is used to parse through the jsdom window
