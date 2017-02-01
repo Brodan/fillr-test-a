@@ -9,12 +9,12 @@
  * @author    Christopher Hranj
  */
 module.exports.match = function(hash) {
-  var regex = /card expire/
-  var output = []
+  var regex = /card expire/;
+  var output = [];
   Object.keys(hash).forEach(function(key) { 
       if(regex.test(key)){
-        output.push(key)
+        output.push(key);
       }
-  })
-  return output
+  });
+  return output;
 }
